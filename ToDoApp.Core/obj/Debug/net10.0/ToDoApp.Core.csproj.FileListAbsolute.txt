@@ -1,0 +1,11 @@
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/bin/Debug/net10.0/ToDoApp.Core.deps.json
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/bin/Debug/net10.0/ToDoApp.Core.dll
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/bin/Debug/net10.0/ToDoApp.Core.pdb
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.AssemblyInfoInputs.cache
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.AssemblyInfo.cs
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.csproj.CoreCompileInputs.cache
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.dll
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/refint/ToDoApp.Core.dll
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.pdb
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ref/ToDoApp.Core.dll
