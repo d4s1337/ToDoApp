@@ -13,3 +13,4 @@
 /home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Repository/obj/Debug/net10.0/refint/ToDoApp.Repository.dll
 /home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Repository/obj/Debug/net10.0/ToDoApp.Repository.pdb
 /home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Repository/obj/Debug/net10.0/ref/ToDoApp.Repository.dll
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Repository/obj/Debug/net10.0/ToDoApp.Repository.sourcelink.json

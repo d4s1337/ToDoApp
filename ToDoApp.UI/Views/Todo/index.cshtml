@@ -1,0 +1,33 @@
+@using ToDoApp.Core.Models
+@model IEnumerable<Todo>
+
+@{
+    ViewData["Title"] = "Todo Listesi";
+}
+
+<section class="todo-page">
+    <div class="todo-card">
+        <h1>Todo Listesi</h1>
+        <p class="todo-subtitle">Bugün tamamlamak istediklerini ekle.</p>
+
+        <form asp-controller="Todo" asp-action="Add" method="post" class="todo-form">
+            @Html.AntiForgeryToken()
+            <input type="text" name="Title" placeholder="Yeni todo yaz..." aria-label="Yeni todo" maxlength="120" required />
+            <button type="submit">Ekle</button>
+        </form>
+
+        <ul class="todo-list">
+            @foreach (var todo in Model)
+            {
+                <li class="todo-item">
+                    <span>@todo.Title</span>
+                    <form asp-controller="Todo" asp-action="Delete" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="id" value="@todo.Id" />
+                        <button type="submit" class="delete-button">Sil</button>
+                    </form>
+                </li>
+            }
+        </ul>
+    </div>
+</section>

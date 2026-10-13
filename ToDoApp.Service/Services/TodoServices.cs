@@ -20,24 +20,24 @@ namespace ToDoApp.Service.Services
 
         public Task AddAsync(Todo todo)
         {
-            throw new NotImplementedException();
+            return _todoRepository.AddAsync(todo);
         }
 
         public Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            return _todoRepository.DeleteAsync(id);
         }
 
 
 
         public Task<Todo?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return _todoRepository.GetByIdAsync(id);
         }
 
         public Task UpdateAsync(Todo todo)
         {
-            throw new NotImplementedException();
+            return _todoRepository.UpdateAsync(todo);
         }
     }
 

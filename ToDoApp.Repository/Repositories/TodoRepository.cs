@@ -1,43 +1,60 @@
 using ToDoApp.Core.Models;
 using ToDoApp.Core.Repositories;
+using ToDoApp.Repository.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace ToDoApp.Repository.Repositories
 {
     public class TodoRepository : ITodoRepository
     {
-        public Task AddAsync(Todo todo)
+        private readonly TodoDbContext _dbContext;
+
+        public TodoRepository(TodoDbContext dbContext)
         {
-            throw new NotImplementedException();
+            _dbContext = dbContext;
         }
 
-        public Task DeleteAsync(int id)
+        public async Task AddAsync(Todo todo)
         {
-            throw new NotImplementedException();
+            todo.CreatedDate = DateTime.Now;
+            await _dbContext.Todos.AddAsync(todo);
+            await _dbContext.SaveChangesAsync();
         }
 
-        public Task<List<Todo>> GetAllAsync()
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var todo = await _dbContext.Todos.FindAsync(id);
+            if (todo is not null)
+            {
+                _dbContext.Todos.Remove(todo);
+                await _dbContext.SaveChangesAsync();
+            }
         }
 
-        public async Task<List<Todo>> GetAllSync()
+        public async Task<List<Todo>> GetAllAsync()
         {
-            return new List<Todo> {new Todo {Id = 1,
-                Title = "Sample Todo",      
-                Description = "This is a sample todo item.",
-                CreatedDate = DateTime.Now,
-                DueDate = DateTime.Now,
-                IsCompleted = false}
-                                 };
+            return await _dbContext.Todos
+                .AsNoTracking()
+                .OrderByDescending(item => item.CreatedDate)
+                .ToListAsync();
         }
 
-        public Task<Todo?> GetByIdAsync(int id)
+        public async Task<Todo?> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _dbContext.Todos.FindAsync(id);
         }
 
-        public Task UpdateAsync(Todo todo)
+        public async Task UpdateAsync(Todo todo)
         {
-            throw new NotImplementedException();
+            var existingTodo = await _dbContext.Todos.FindAsync(todo.Id);
+            if (existingTodo is not null)
+            {
+                existingTodo.Title = todo.Title;
+                existingTodo.Description = todo.Description;
+                existingTodo.IsCompleted = todo.IsCompleted;
+                existingTodo.DueDate = todo.DueDate;
+                await _dbContext.SaveChangesAsync();
+            }
         }
     }
 }

@@ -9,3 +9,4 @@
 /home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/refint/ToDoApp.Core.dll
 /home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.pdb
 /home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ref/ToDoApp.Core.dll
+/home/dasii/Masaüstü/kisisel/okul/webtasprog/TodoApp/ToDoApp.Core/obj/Debug/net10.0/ToDoApp.Core.sourcelink.json
